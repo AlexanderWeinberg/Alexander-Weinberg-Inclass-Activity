@@ -118,15 +118,16 @@ elem list_get_elem_at(list_t *l, int index) {
 int list_get_index_of(list_t *l, elem value) { 
   node_t *ptr = l -> head;
   int counte = 0;
-  int index_valu = NULL;
-  if ( index_valu == NULL){
-    printf("The element %d is not in the list.",value);
-  }
+  int index_valu;
+//   if ( value == null){
+//     printf("The element %d is not in the list.",value);
+//   }
   while (counte<size){
     ptr = ptr->next;
-    if (value == ptr -> value){
+    if (ptr -> value == value){
       index_valu = counte;
-    }
+    }else{printf("The element %d is not in the list.",value);}
+    counte++;
   }
   
 printf("The element %d is at index[%d]\n",value, index_valu);

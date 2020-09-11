@@ -31,14 +31,19 @@ int main() {
   
   list_get_elem_at(mylist, 20);
   
+  
+  
   list_get_index_of(mylist, 2);
   
   list_get_index_of(mylist, 7);
+  
+  list_get_index_of(mylist, 1000);
+  
 //   list_free(mylist);
   
   list_print(mylist);
   
-  int lenght = list_length(mylist);
+  int length = list_length(mylist);
   
    printf("List Length: %d\n",length);
   
