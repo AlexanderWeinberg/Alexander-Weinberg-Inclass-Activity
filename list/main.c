@@ -23,17 +23,17 @@ int main() {
   
   //89 2 100 7 709 20 //expected list
   
-  list_is_in(mylist,709); //should be true
+//   list_is_in(mylist,709); //should be true
   
-  list_is_in(mylist,89); //should be false
+//   list_is_in(mylist,89); //should be false
   
-//   list_get_elem_at(mylist, 0);
+  list_get_elem_at(mylist, 0);
   
-//   list_get_elem_at(mylist, 1);
+  list_get_elem_at(mylist, 1);
   
-//   list_get_elem_at(mylist, 3);
+  list_get_elem_at(mylist, 3);
   
-//   list_get_elem_at(mylist, 20);
+  list_get_elem_at(mylist, 20);
   
   
 //   list_get_index_of(mylist, 2);

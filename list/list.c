@@ -88,53 +88,72 @@ void list_add_at_index(list_t *l, elem value, int index) {
 }
 
 elem list_remove_from_back(list_t *l) {
-   if (!l){
-        return 0; 
+//    if (!l){
+//         return 0; 
+//     }
+//     node_t *t = l->head;
+//     while (t->next != NULL){
+//       t = t->next;
+//     }
+//     elem remov = t->value;
+//     free(t);
+//     printf("This element was removed: %d", remov);
+  
+  if (l->head == NULL){
+    printf("List is already empty\n");
+    return;
+  }
+  int current_index = 0;
+  node_t *current_node = malloc(sizeof(node_t));
+  current_node = l->head;
+  while (current_node != NULL){
+    if (current_index == size - 1){
+      node_t *original_next = malloc(sizeof(node_t));
+      original_next = current_node->next;
+      current_node->next = NULL;
+      size--;
+      return original_next->value;
     }
-    node_t *t = l->head;
-    while (t->next != NULL){
-      t = t->next;
-    }
-    elem remov = t->value;
-    free(t);
-    printf("This element was removed: %d", remov);
-    size--;
+    current_node = current_node->next;
+    current_index++;
+  }
+//     size--;
      }
 
 elem list_remove_from_front(list_t *l) { 
-   if (!l)
-    {
-        printf("The list does not exist.");
-        return 0;
-    }
-    elem returnee = l->head->value;
-    node_t *freer = l->head;
-    l->head = l->head->next;
-    free(freer);
-    return returnee;
-  size--;
+//    if (!l)
+//     {
+//         printf("The list does not exist.");
+//         return 0;
+//     }
+//     elem returnee = l->head->value;
+//     node_t *freer = l->head;
+//     l->head = l->head->next;
+//     free(freer);
+//     return returnee;
+//   size--;
 }
 
 
-elem list_remove_at_index(list_t *l, int index) {if (!l)
-    {
-        printf("The list does not exist.");
-        return 0;
-    }
-    int i = 0;
-    node_t *t = l->head;
-    while (t->next != NULL && i < index)
-    {
-        t = t->next;
-        i++;
-    }
-    node_t *freer = t->next;
-    elem val = t->next->value;
-    t->next = t->next->next;
-    free(freer);
-    return val;
-    size--;
-                                                }
+elem list_remove_at_index(list_t *l, int index) {
+//   if (!l){
+//         printf("The list does not exist.");
+//         return 0;
+//     }
+//     int i = 0;
+//     node_t *t = l->head;
+//     while (t->next != NULL && i < index)
+//     {
+//         t = t->next;
+//         i++;
+//     }
+//     node_t *freer = t->next;
+//     elem val = t->next->value;
+//     t->next = t->next->next;
+//     free(freer);
+//     return val;
+//     size--;
+ }
 
 bool list_is_in(list_t *l, elem value) { 
 //   int check = value2;
